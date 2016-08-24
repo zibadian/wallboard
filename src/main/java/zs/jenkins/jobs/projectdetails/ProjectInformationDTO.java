@@ -1,4 +1,4 @@
-package cap.jenkins.jobs.projectdetails;
+package zs.jenkins.jobs.projectdetails;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
@@ -9,4 +9,15 @@ public class ProjectInformationDTO {
     private String url;
     private String color;
 
+    public String getName() {
+        return name;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public String getColor() {
+        return color;
+    }
 }

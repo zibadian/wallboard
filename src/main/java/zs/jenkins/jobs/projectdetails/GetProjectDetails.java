@@ -1,8 +1,8 @@
-package cap.jenkins.jobs.projectdetails;
+package zs.jenkins.jobs.projectdetails;
 
-import cap.jenkins.httpclient.AbstractClientService;
-import cap.jenkins.httpclient.HTTPClient;
-import cap.jenkins.jobs.jobdetails.JobInformationDTO;
+import zs.jenkins.httpclient.AbstractClientService;
+import zs.jenkins.httpclient.HTTPClient;
+import zs.jenkins.jobs.jobdetails.JobInformationDTO;
 import java.io.IOException;
 import java.util.List;
 

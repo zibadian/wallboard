@@ -1,4 +1,4 @@
-package cap.jenkins.httpclient;
+package zs.jenkins.httpclient;
 
 public abstract class AbstractClientService {
 

@@ -1,4 +1,4 @@
-package cap.jenkins.jobs.jobdetails;
+package zs.jenkins.jobs.jobdetails;
 
 public enum JobRunResult {
 

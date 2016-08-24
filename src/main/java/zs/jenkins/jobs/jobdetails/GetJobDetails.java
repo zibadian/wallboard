@@ -1,14 +1,13 @@
-package cap.jenkins.jobs.jobdetails;
+package zs.jenkins.jobs.jobdetails;
 
-import cap.jenkins.httpclient.HTTPClient;
+import zs.jenkins.httpclient.AbstractClientService;
+import zs.jenkins.httpclient.HTTPClient;
 import java.io.IOException;
 
-public class GetJobDetails {
-
-    private final HTTPClient client;
+public class GetJobDetails extends AbstractClientService {
 
     public GetJobDetails(final HTTPClient client) {
-        this.client = client;
+        super(client);
     }
 
     public JobDetailsDTO getJob(final String jobUrl) throws IOException {

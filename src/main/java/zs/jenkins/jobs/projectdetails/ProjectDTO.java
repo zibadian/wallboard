@@ -1,6 +1,6 @@
-package cap.jenkins.jobs.projectdetails;
+package zs.jenkins.jobs.projectdetails;
 
-import cap.jenkins.jobs.jobdetails.JobInformationDTO;
+import zs.jenkins.jobs.jobdetails.JobInformationDTO;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import java.util.List;
 

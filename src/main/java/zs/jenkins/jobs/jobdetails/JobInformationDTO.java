@@ -1,4 +1,4 @@
-package cap.jenkins.jobs.jobdetails;
+package zs.jenkins.jobs.jobdetails;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
