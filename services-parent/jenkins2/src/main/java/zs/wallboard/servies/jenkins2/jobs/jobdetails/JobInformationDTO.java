@@ -1,21 +1,16 @@
-package zs.jenkins.jobs.jobdetails;
+package zs.wallboard.servies.jenkins2.jobs.jobdetails;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class JobInformationDTO {
 
-    private boolean building;
     private long duration;
     private String fullDisplayName;
     private String id;
     private JobRunResult result;
     private long timestamp;
     private String url;
-
-    public boolean isBuilding() {
-        return building;
-    }
 
     public long getDuration() {
         return duration;
@@ -39,6 +34,18 @@ public class JobInformationDTO {
 
     public String getUrl() {
         return url;
+    }
+
+    public void setBuilding(final boolean building) {
+        if (building) {
+            result = JobRunResult.RUNNING;
+        }
+    }
+
+    public void setResult(final JobRunResult result) {
+        if (this.result == null) {
+            this.result = result;
+        }
     }
 
 }

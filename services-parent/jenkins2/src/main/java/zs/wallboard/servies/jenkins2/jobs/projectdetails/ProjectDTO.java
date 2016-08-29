@@ -1,7 +1,8 @@
-package zs.jenkins.jobs.projectdetails;
+package zs.wallboard.servies.jenkins2.jobs.projectdetails;
 
-import zs.jenkins.jobs.jobdetails.JobInformationDTO;
+import zs.wallboard.servies.jenkins2.jobs.jobdetails.JobInformationDTO;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import java.util.List;
 
 @JsonIgnoreProperties(ignoreUnknown = true)

@@ -1,4 +1,4 @@
-package zs.jenkins.jobs.jobdetails;
+package zs.wallboard.servies.jenkins2.jobs.jobdetails;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import java.util.List;
