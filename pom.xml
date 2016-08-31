@@ -12,14 +12,17 @@
     <properties>
         <version.jersey>2.23.2</version.jersey>
         <version.commons>1.0-SNAPSHOT</version.commons>
+        <version.jackson>2.7.5</version.jackson>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <version.junit>4.12</version.junit>
     </properties>
 
     <modules>
         <module>services-parent</module>
         <module>wallboard-commons</module>
+        <module>wallboardAPI</module>
     </modules>
 
     <dependencyManagement>
@@ -30,9 +33,29 @@
                 <version>${version.jersey}</version>
             </dependency>
             <dependency>
+                <groupId>org.glassfish.jersey.core</groupId>
+                <artifactId>jersey-server</artifactId>
+                <version>${version.jersey}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.glassfish.jersey.containers</groupId>
+                <artifactId>jersey-container-grizzly2-http</artifactId>
+                <version>${version.jersey}</version>
+            </dependency>
+            <dependency>
                 <groupId>org.glassfish.jersey.media</groupId>
                 <artifactId>jersey-media-json-jackson</artifactId>
                 <version>${version.jersey}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-databind</artifactId>
+                <version>${version.jackson}</version>
+            </dependency>
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>${version.junit}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
