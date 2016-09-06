@@ -1,7 +1,4 @@
-package zs.wallboard.wallboardapi.model;
-
-import zs.wallboard.commons.model.Status;
-import zs.wallboard.commons.model.Version;
+package zs.wallboard.commons.model;
 
 public final class ProjectLink {
 

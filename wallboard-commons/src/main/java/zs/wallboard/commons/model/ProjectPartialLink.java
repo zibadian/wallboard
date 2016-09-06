@@ -1,4 +1,4 @@
-package zs.wallboard.wallboardapi.model;
+package zs.wallboard.commons.model;
 
 import zs.wallboard.commons.model.Status;
 

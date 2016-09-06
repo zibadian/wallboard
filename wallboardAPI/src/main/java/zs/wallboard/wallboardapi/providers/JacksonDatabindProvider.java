@@ -7,6 +7,7 @@ import org.glassfish.jersey.server.ResourceConfig;
 import zs.wallboard.commons.model.Version;
 
 public final class JacksonDatabindProvider {
+
     private JacksonDatabindProvider() {
     }
 
@@ -23,12 +24,6 @@ public final class JacksonDatabindProvider {
     public static JacksonJaxbJsonProvider jacksonJaxbJsonProvider() {
         JacksonJaxbJsonProvider result = new JacksonJaxbJsonProvider();
         result.setMapper(objectMapper());
-        return result;
-    }
-
-    public static ResourceConfig resourceConfig() {
-        final ResourceConfig result = new ResourceConfig();
-        result.register(jacksonJaxbJsonProvider());
         return result;
     }
 

@@ -6,8 +6,8 @@
 
     <groupId>zs.wallboard</groupId>
     <artifactId>wallboard-parent</artifactId>
-    <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
 
     <properties>
         <version.jersey>2.23.2</version.jersey>
@@ -38,9 +38,24 @@
                 <version>${version.jersey}</version>
             </dependency>
             <dependency>
+                <groupId>org.glassfish.jersey.ext</groupId>
+                <artifactId>jersey-mvc-jsp</artifactId>
+                <version>${version.jersey}</version>
+            </dependency>
+            <dependency>
                 <groupId>org.glassfish.jersey.containers</groupId>
                 <artifactId>jersey-container-grizzly2-http</artifactId>
                 <version>${version.jersey}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+                <version>1.7.21</version>
+            </dependency>
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-simple</artifactId>
+                <version>1.7.21</version>
             </dependency>
             <dependency>
                 <groupId>org.glassfish.jersey.media</groupId>

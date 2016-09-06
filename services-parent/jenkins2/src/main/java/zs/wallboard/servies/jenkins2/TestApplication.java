@@ -19,9 +19,9 @@ import java.util.List;
 
 public class TestApplication {
 
-    private static final String BASE_URL = "http://233.10.11.12:8080/";
-    private static final String USER_ID = "user";
-    private static final String USER_PASSWORD = "password";
+    private static final String BASE_URL = "http://localhost:9000/";
+    private static final String USER_ID = "bart";
+    private static final String USER_PASSWORD = "bart";
 
     public static void main(String[] args) throws IOException {
         final AbstractHTTPClient httpClient = new HTTPClientImpl(ClientBuilder
