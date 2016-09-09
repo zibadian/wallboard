@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en" ng-app="wallboardApp">
+<head>
+    <meta charset="utf-8">
+    <title>My HTML File</title>
+    <link rel="stylesheet" href="css/status.css"/>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css"/>
+    <link rel="stylesheet" href="css/status.css"/>
+    <script src="node_modules/angular/angular.js"></script>
+    <script src="app/wallboard.js"></script>
+    <script src="app/main/controller.js"></script>
+</head>
+<body ng-controller="WallboardController">
+    <div ng-include="'partials/top.html'"></div>
+    <div ng-include="'partials/main.html'" id="main_view"></div>
+</body>
+</html>

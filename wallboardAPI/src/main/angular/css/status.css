@@ -1,0 +1,70 @@
+body {
+    background-color: black;
+}
+
+.green-status {
+    background-color: green;
+}
+
+.yellow-status {
+    background-color: yellow;
+}
+
+.red-status {
+    background-color: red;
+}
+
+.unknown-status {
+    background-color: grey;
+}
+
+a.main-status {
+    text-decoration: none;
+    color: black;
+    font-size: 200%;
+    font-weight: bold;
+}
+
+div.main-status{
+    display: inline-block;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 5px;
+    font-color: black;
+}
+
+a.partial-status {
+    text-decoration: none;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 3px;
+}
+
+div.partial-status {
+    display: inline-block;
+    padding: 6px 6px 6px 6px;
+    background-color: black;
+    border-radius: 3px;
+    margin: -2px
+}
+
+.partial-statuses {
+    display: inline-block;
+    padding: 5px;
+}
+
+#top_container {
+    background-color: #222222;
+    min-height: 30px;
+}
+
+#home {
+    background-color: white;
+}
+
+.top-status {
+    display: inline-block;
+    padding: 6px 6px 6px 6px;
+    background-color: #222222;
+}

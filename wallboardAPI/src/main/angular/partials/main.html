@@ -1,0 +1,14 @@
+<div ng-repeat="status in mainStatuses">
+    <div class="ng-class: getStatusClass(status.status); main-status col-md-2">
+        <div>
+            <a ng-href="{{status.url}}" target="_blank" class="main-status">{{status.name}}</a>
+        </div>
+        <div class="partial-statuses">
+            <div ng-repeat="partial in status.partials" class="partial-status">
+                <a class="ng-class: getStatusClass(partial.status); partial-status"
+                   title="{{partial.name}}"
+                   ng-href="{{partial.url}}" target="_blank">&nbsp;</a>
+            </div>
+        </div> ({{status.version}})
+    </div>
+</div>

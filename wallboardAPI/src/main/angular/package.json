@@ -1,0 +1,16 @@
+{
+  "name": "wallboard",
+  "engines": {
+    "node": "<5",
+    "npm": "~2.5"
+  },
+  "scripts": {
+  },
+  "devDependencies": {
+    "angular": "1.5.8",
+    "angular-mocks": "1.5.8",
+    "angular-sanitize": "1.5.8",
+    "bootstrap": "3.3.7"
+  },
+  "dependencies": {}
+}

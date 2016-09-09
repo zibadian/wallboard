@@ -1,0 +1,9 @@
+<div id="top_container">
+    <div class="top-status">
+        <a id="home" class="partial-status" title="Home" href="/">&nbsp;</a>
+    </div>
+    <div ng-repeat="status in mainStatuses" class="top-status">
+        <a class="ng-class: getStatusClass(status.status); partial-status"
+           ng-href="{{status.url}}" title="{{status.name}}">&nbsp;</a>
+    </div>
+</div>
