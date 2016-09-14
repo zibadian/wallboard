@@ -1,14 +1,18 @@
-angular.module('wallboardApp').controller('MainPageController', function MainPageController($scope, StatusService, $routeParams) {
+angular.module('wallboardApp').controller('MainController', function MainPageController($scope, ConnectionService, $routeParams) {
 
-    $scope.projectName = $routeParams.projectName;
-    $scope.projectDetail = $routeParams.projectDetail;
-
-    $scope.update = function() {
-        $scope.statuses = StatusService.getStatusOverview();
+    $scope.updateOverview = function() {
+        $scope.statuses = ConnectionService.retrieveData('/api/overview');
     }
 
-    $scope.getStatusClass = function getStatusClass(status) {
+    $scope.updateProject = function() {
+        $scope.statuses = ConnectionService.retrieveData('/api/project/' + $routeParams.projectName);
+    }
+
+    $scope.getStatusClass = function(status) {
         return status.toLowerCase()+'-status';
     }
 
+    $scope.getTemplate = function(name) {
+        return 'partials/details/'+name;
+    }
 });

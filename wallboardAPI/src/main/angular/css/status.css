@@ -59,7 +59,7 @@ div.partial-status {
     padding: 5px;
 }
 
-#top_container {
+#top-container {
     background-color: #222222;
     min-height: 30px;
 }
@@ -72,4 +72,20 @@ div.partial-status {
     display: inline-block;
     padding: 6px 6px 6px 6px;
     background-color: #222222;
+}
+
+#main-container {
+    color: #FFFFFF;
+}
+
+#time-container {
+    color: #87CEFA;
+    display: inline-block;
+    position: absolute;
+    right: 15px;
+    font-size: 1.5em;
+}
+
+#top-status-container {
+    display: inline-block;
 }

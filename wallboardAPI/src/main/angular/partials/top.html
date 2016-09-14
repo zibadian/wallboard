@@ -1,9 +1,14 @@
-<div id="top_container" ng-controller="TopController" ng-init="update()">
-    <div class="top-status">
-        <a id="home" class="partial-status" title="Home" href="#/">&nbsp;</a>
+<div id="top-container" ng-controller="TopController" ng-init="start()">
+    <div id="top-status-container">
+        <div class="top-status">
+            <a id="home" class="partial-status" title="Home" href="#/">&nbsp;</a>
+        </div>
+        <div ng-repeat="status in topData.statuses" class="top-status">
+            <a class="ng-class: getStatusClass(status.status); partial-status"
+               ng-href="{{status.url}}" title="{{status.name}}">&nbsp;</a>
+        </div>
     </div>
-    <div ng-repeat="status in statuses" class="top-status">
-        <a class="ng-class: getStatusClass(status.status); partial-status"
-           ng-href="{{status.url}}" title="{{status.name}}">&nbsp;</a>
+    <div id="time-container">
+        {{topData.time}}
     </div>
 </div>
