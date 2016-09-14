@@ -1,18 +1,20 @@
-angular.module('wallboardApp').controller('TopController', function TopController($scope, $interval, ConnectionService) {
+angular.module('wallboardApp').controller('TopController', function TopController($scope, $interval, ConnectionService, $rootScope) {
 
     var timer;
 
     $scope.start = function() {
-        $scope.update();
-        if ( angular.isDefined(timer) ) return;
+        $rootScope.$broadcast('update');
+        if ( angular.isDefined(timer) ) {
+            return;
+        }
         timer = $interval(function() {
-            $scope.update();
+            $rootScope.$broadcast('update');
         }, 5000);
     }
 
-    $scope.update = function() {
+    $scope.$on('update', function(event) {
         $scope.topData = ConnectionService.retrieveData('/api/top');
-    }
+    });
 
     $scope.getStatusClass = function getStatusClass(status) {
         return status.toLowerCase()+'-status';

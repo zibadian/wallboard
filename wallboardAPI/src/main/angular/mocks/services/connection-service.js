@@ -1,4 +1,4 @@
-angular.module('wallboardApp').service('ConnectionService', function($http, $q, $timeout, dateFilter) {
+angular.module('wallboardApp').service('ConnectionService', function($http, $q, $timeout, $location, dateFilter) {
 
     this.retrieveData = function(address) {
         console.log(address);
@@ -13,7 +13,7 @@ angular.module('wallboardApp').service('ConnectionService', function($http, $q, 
                 result.time = formatTime(result.time);
                 return result;
             case '/api/overview':
-                return [
+                result = [
                     {"name":"Test Application","status":"GREEN","version":"1.0.1","url":"#/testproject","partials":[
                         {"name":"build","status":"GREEN","url":"#/testproject/build"},
                         {"name":"check","status":"YELLOW","url":"#/testproject/sonar"},
@@ -35,6 +35,8 @@ angular.module('wallboardApp').service('ConnectionService', function($http, $q, 
                         {"name":"prod","status":"RED","url":"#/errorproject/prod"}
                     ]}
                 ];
+                result[0].name = new Date();
+                return result;
             case '/api/project/testproject':
                 return {"name":"Test Application","status":"GREEN","version":"1.0.1","url":"#/testproject","partials":[
                     {"name":"build","status":"GREEN","url":"#/testproject/build","version":"1.0.3-SNAPSHOT","template":"build.html"},
