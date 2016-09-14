@@ -18,6 +18,11 @@ body {
     background-color: grey;
 }
 
+.link {
+    overflow-x:hidden;
+    white-space: nowrap;
+}
+
 a.main-status {
     text-decoration: none;
     color: black;

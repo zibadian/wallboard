@@ -1,0 +1,6 @@
+<div id="project_container" ng-controller="ProjectController" ng-init="update()">
+    <h1>Project: {{projectDetails.name}}</h1>
+    <div ng-repeat="partial in projectDetails.partials">
+        <div ng-include="getTemplate(partial.template)"></div>
+    </div>
+</div>

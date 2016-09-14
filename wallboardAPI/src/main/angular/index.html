@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" ng-app="wallboardApp">
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <title>My HTML File</title>
@@ -7,11 +7,16 @@
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css"/>
     <link rel="stylesheet" href="css/status.css"/>
     <script src="node_modules/angular/angular.js"></script>
+    <script src="node_modules/angular-route/angular-route.js"></script>
     <script src="app/wallboard.js"></script>
-    <script src="app/main/controller.js"></script>
+    <script src="app/controllers/maincontroller.js"></script>
+    <script src="app/controllers/topcontroller.js"></script>
+    <script src="app/controllers/projectcontroller.js"></script>
+    <script src="app/services/connection-service.js"></script>
+    <script src="app/services/status-service.js"></script>
 </head>
-<body ng-controller="WallboardController">
+<body ng-app="wallboardApp">
     <div ng-include="'partials/top.html'"></div>
-    <div ng-include="'partials/main.html'" id="main_view"></div>
+    <ng-view></ng-view>
 </body>
 </html>
